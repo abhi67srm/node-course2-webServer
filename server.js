@@ -36,9 +36,10 @@ app.use((req,res, next)=>{
 
 
 });
-app.use((req, res, next)=>{
-    res.render('maintainance.hbs');
-})
+
+// app.use((req, res, next)=>{
+//     res.render('maintainance.hbs');
+// })
 app.use(express.static(__dirname + '/public'));
 //Register an handler for a http get request
 hbs.registerHelper('getCurrentYear', ()=>{
@@ -67,11 +68,11 @@ app.get('/about',(req, res)=>{
      });
 });
 
-// app.get('/bad', (req, res)=>{
-//     res.send({
-//         errorMessage: 'Unable to fetch data'
-//     });
-// });
+app.get('/bad', (req, res)=>{
+    res.send({
+        errorMessage: 'Unable to fetch data'
+    });
+});
 //Bind the application to port in our machine
 
 app.listen(port, ()=>{
