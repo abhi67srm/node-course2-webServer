@@ -67,11 +67,11 @@ app.get('/about',(req, res)=>{
      });
 });
 
-app.get('/bad', (req, res)=>{
-    res.send({
-        errorMessage: 'Unable to fetch data'
-    });
-});
+// app.get('/bad', (req, res)=>{
+//     res.send({
+//         errorMessage: 'Unable to fetch data'
+//     });
+// });
 //Bind the application to port in our machine
 
 app.listen(port, ()=>{
